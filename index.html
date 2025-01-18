@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío - Mejorado</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <script src="assets/JS/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+      
+
+        <!-- Parte 1 -->
+        <div class="image-container">
+           
+            <img id="toggleBorderImage" src="assets/IMG/logo.png" alt="Logo Tienda de Stickers">
+        </div>
+
+        <!-- Parte 2 -->
+        <div class="sticker-container">
+            <div class="card">
+                <h3>Sticker</h3>
+                <img src="assets/IMG/st1.png" alt="Sticker 1">
+                <input type="number" id="sticker1" placeholder="Cantidad">
+            </div>
+            <div class="card">
+                <h3>Sticker 2</h3>
+                <img src="assets/IMG/st2.png" alt="Sticker 2">
+                <input type="number" id="sticker2" placeholder="Cantidad">
+            </div>
+            <div class="card">
+                <h3>Sticker 3</h3>
+                <img src="assets/IMG/st3.png" alt="Sticker 3">
+                <input type="number" id="sticker3" placeholder="Cantidad">
+            </div>
+        </div>
+        <button onclick="calculateStickers()">Calcular Stickers</button>
+        <p id="result"></p>
+
+        <!-- Parte 3 -->
+        <div class="password-container">
+            <h2>Parte 3: Verificar contraseña</h2>
+            <select id="digit1">
+                <option value="">-</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select id="digit2">
+                <option value="">-</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select id="digit3">
+                <option value="">-</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <button onclick="checkPassword()">Ingresar</button>
+            <p id="passwordResult"></p>
+        </div>
+    </div>
+</body>
+</html>

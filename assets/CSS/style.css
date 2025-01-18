@@ -1,0 +1,151 @@
+/* assets/CSS/style.css */
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    color: #555;
+    margin: 20px 0;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #444;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Parte 1: Imagen */
+.image-container img {
+    cursor: pointer;
+    width: 200px;
+    height: auto;
+    transition: border 0.3s ease;
+}
+
+/* Parte 2: Stickers */
+.sticker-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Mayor espacio entre tarjetas */
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px; /* Espacio interno aumentado */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 200px; /* Tarjetas más grandes */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más prominente */
+    transition: transform 0.3s ease, border 0.2s ease; /* Suavidad en animaciones */
+}
+
+.card img {
+    width: 120px; /* Imágenes más grandes */
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Efecto de agrandamiento */
+}
+
+/* Efecto "grow" al pasar el mouse sobre las imágenes */
+.card img:hover {
+    transform: scale(1.2); /* Incremento del tamaño en un 20% */
+}
+
+/* Input centrado */
+.card input {
+    width: 80px; /* Ampliar un poco el ancho */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    margin: 10px auto 0; /* Centrado vertical y horizontal */
+    display: block; /* Garantiza alineación centrada */
+}
+
+/* Tarjeta seleccionada (borde rojo) */
+.card-selected {
+    border: 2px solid red; /* Borde rojo */
+}
+
+/* Botones */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Mensajes de resultado */
+#error,
+#result,
+#passwordResult {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#error {
+    color: red;
+}
+
+#passwordResult {
+    color: #007BFF;
+}
+
+/* Parte 3: Verificar contraseña */
+.password-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+select {
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+/* Responsividad */
+@media screen and (max-width: 600px) {
+    .sticker-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 80%; /* Tamaño adaptado en móviles */
+    }
+}
